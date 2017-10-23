@@ -35,7 +35,13 @@ class TrainingProgramsController < ApplicationController
 
   # DELETE /training_programs/1
   def destroy
-    @training_program.destroy
+    # if the start date is less sooner than today's date then delete
+    if @training_program.start_date < DateTime.now.to_date
+      @training_program.destroy
+    # if start date on or after today show following alert 
+    else
+      render html: "<script>alert('Programs may only be deleted prior to start date!')</script>"
+    end
   end
 
   private
