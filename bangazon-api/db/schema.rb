@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020201530) do
+ActiveRecord::Schema.define(version: 20171023150902) do
 
   create_table "customers", force: :cascade do |t|
     t.text "last_name"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20171020201530) do
     t.integer "zip_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "payment_types", force: :cascade do |t|
+    t.text "payment_type"
+    t.integer "account_number"
+    t.integer "Customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["Customer_id"], name: "index_payment_types_on_Customer_id"
   end
 
   create_table "product_types", force: :cascade do |t|
