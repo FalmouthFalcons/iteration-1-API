@@ -3,9 +3,20 @@ class CustomersController < ApplicationController
 
   # GET /customers
   def index
-    @customers = Customer.all
+    
+    # Ability to display customers who have not placed an order  
+    if params[:active] == "false"  
+      @customers = Customer.where(:active => false)
+      render json: @customers
+    elsif 
+        params[:active] == "true"  
+        @customers = Customer.where(:active => true)
+        render json: @customers
+    else
+      @customers = Customer.all
+      render json: @customers
+    end
 
-    render json: @customers
   end
 
   # GET /customers/1
