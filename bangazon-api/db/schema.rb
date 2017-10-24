@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20171023205358) do
+
   create_table "computers", force: :cascade do |t|
     t.date "purchase_date"
     t.date "decomission_date"
