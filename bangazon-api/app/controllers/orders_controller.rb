@@ -10,7 +10,10 @@ class OrdersController < ApplicationController
 
   # GET /orders/1
   def show
-    render json: @order
+    # @order = Order.find(params[:id]).includes(:Product)
+    # @order = Order.includes(:Products).find(params[:id])
+    render json: @order, :include => ["Products"]
+    
   end
 
   # POST /orders
