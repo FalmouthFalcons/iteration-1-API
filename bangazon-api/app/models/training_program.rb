@@ -1,2 +1,3 @@
 class TrainingProgram < ApplicationRecord
+
 end
