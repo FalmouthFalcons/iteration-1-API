@@ -1,4 +1,4 @@
 class EmployeeTrainingProgram < ApplicationRecord
-  belongs_to :employee
-  belongs_to :training_program
+  belongs_to :Employee
+  belongs_to :Training_program
 end
