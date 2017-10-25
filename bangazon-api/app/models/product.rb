@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :Customer
-  has_many :Order_Products
-  has_many :Orders, through: :Order_Products
+  belongs_to :customer
+  has_many :order_products
+  has_many :orders, through: :order_products
 end

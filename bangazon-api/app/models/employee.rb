@@ -1,7 +1,7 @@
 class Employee < ApplicationRecord
-  belongs_to :Department
-  has_many :Employee_Training_Programs
-  has_many :Training_Programs, through: :Employee_Training_Programs
-  has_many :Employee_Computers
-  has_many :Computers, through: :Employee_Computers
+  belongs_to :department
+  has_many :employee_training_programs
+  has_many :training_programs, through: :employee_training_programs
+  has_many :employee_computers
+  has_many :computers, through: :employee_computers
 end

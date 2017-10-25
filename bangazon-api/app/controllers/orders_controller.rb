@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   def show
     # @order = Order.find(params[:id]).includes(:Product)
     # @order = Order.includes(:Products).find(params[:id])
-    render json: @order, :include => ["Products"]
+    render json: @order, :include => [:Products]
     
   end
 
@@ -49,6 +49,6 @@ class OrdersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def order_params
-      params.require(:order).permit(:Customer_id, :Payment_Type_id)
+      params.require(:order).permit(:customer_id, :payment_type_id)
     end
 end

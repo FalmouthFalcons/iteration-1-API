@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
-  belongs_to :Customer
-  belongs_to :Payment_Type
-  has_many :Order_Products
-  has_many :Products, through: :Order_Products
+  belongs_to :customer
+  belongs_to :payment_type
+  has_many :order_products
+  has_many :products, through: :order_products
 end
