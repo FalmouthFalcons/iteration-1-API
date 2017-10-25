@@ -18,13 +18,36 @@ to the Bangazon customer and employee database.
 
 1. Follow getting started steps
 2. run rails server
-3. test using postman
+3. test using postman with following endpoints: (may sub numbers 1-3 for endpoints with id's)
+    - /customers
+        - /customers/1
+    - /products
+        - /products/1
+    - /product_types
+        - /payment_types/1
+    - /orders
+        - /orders/1
+    - /order_products
+        - /order_products/1
+    - /payment_types
+        - /payment_types/1
+    - /employees
+        - /employees/1
+    - /departments
+        - /departments/1
+    - /computers
+        - /computers/1
+    - /employee_computers
+        - /employee_computers/1
+    - /employee_training_programs
+        - /employee_training_programs/1
+    - /training_programs
+        - /training_programs/1
 
 ## Running the tests
 
 ### CORS testing for issue #12
-1. Uncomment cors rack code in application.rb
-2. Create simple index.html
+1. Create simple index.html
 
     Paste the following:
     ```<DOCTYPE!>
@@ -70,18 +93,7 @@ to the Bangazon customer and employee database.
 
 ## Explain how to run the automated tests for this system
 
- - Break down into end to end tests
-
- - Explain what these tests test and why
-
- - Give an example And coding style tests
-
- - Explain what these tests test and why
-
- - Give an example
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+  - run rails test
 
 ## Built With
 
