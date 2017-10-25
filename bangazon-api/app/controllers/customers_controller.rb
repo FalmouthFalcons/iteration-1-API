@@ -9,10 +9,12 @@ class CustomersController < ApplicationController
       @customers = Customer.where(:active => false)
       render json: @customers
     elsif 
+      # (and vice versa) Shows only with orders 
         params[:active] == "true"  
         @customers = Customer.where(:active => true)
         render json: @customers
     else
+      # Shows all customers 
       @customers = Customer.all
       render json: @customers
     end

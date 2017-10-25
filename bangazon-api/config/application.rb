@@ -30,6 +30,8 @@ module BangazonApi
     # Skip views, helpers and assets when generating a new resource.
 
     #Added rack-cors config:
+    
+    #Allows cross-origin resource sharing:  
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         #origins 
@@ -37,7 +39,7 @@ module BangazonApi
         resource '*', :headers => :any, :methods => [:get, :post, :put, :destroy, :options]
       end
     end
-
+# End of CORS config
 
 
     config.api_only = true

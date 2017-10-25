@@ -3,6 +3,7 @@ require 'test_helper'
 class TrainingProgramsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @training_program = training_programs(:one)
+    #allow deletion of training program(s) 
     @training_program_past = training_programs(:two)
   end
 
@@ -28,7 +29,7 @@ class TrainingProgramsControllerTest < ActionDispatch::IntegrationTest
     patch training_program_url(@training_program), params: { training_program: { end_date: @training_program.end_date, max_occupancy: @training_program.max_occupancy, start_date: @training_program.start_date, subject: @training_program.subject } }, as: :json
     assert_response 200
   end
-
+  #Ensure that a user may destroy a program that is today's date or in the future. 
   test "should destroy training_program" do
     assert_difference('TrainingProgram.count', -1) do
       delete training_program_url(@training_program), as: :json
@@ -36,7 +37,7 @@ class TrainingProgramsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response 204
   end
-
+  #Ensure that a user may NOT destroy a program that is yesterday's date or further past.  
     test "should not destroy training_program" do
     assert_difference('TrainingProgram.count', 0) do
       delete training_program_url(@training_program_past), as: :json
