@@ -12,7 +12,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create employee" do
     assert_difference('Employee.count') do
-      post employees_url, params: { employee: { Department_id: @employee.Department_id, employee_hire_date: @employee.employee_hire_date, job_title: @employee.job_title, name_first: @employee.name_first, name_last: @employee.name_last } }, as: :json
+      post employees_url, params: { employee: { department_id: @employee.department_id, employee_hire_date: @employee.employee_hire_date, job_title: @employee.job_title, name_first: @employee.name_first, name_last: @employee.name_last } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update employee" do
-    patch employee_url(@employee), params: { employee: { Department_id: @employee.Department_id, employee_hire_date: @employee.employee_hire_date, job_title: @employee.job_title, name_first: @employee.name_first, name_last: @employee.name_last } }, as: :json
+    patch employee_url(@employee), params: { employee: { department_id: @employee.department_id, employee_hire_date: @employee.employee_hire_date, job_title: @employee.job_title, name_first: @employee.name_first, name_last: @employee.name_last } }, as: :json
     assert_response 200
   end
 

@@ -12,7 +12,7 @@ class EmployeeTrainingProgramsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create employee_training_program" do
     assert_difference('EmployeeTrainingProgram.count') do
-      post employee_training_programs_url, params: { employee_training_program: { employee_id: @employee_training_program.employee_id, program_id: @employee_training_program.program_id } }, as: :json
+      post employee_training_programs_url, params: { employee_training_program: { employee_id: @employee_training_program.employee_id, training_program_id: @employee_training_program.training_program_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class EmployeeTrainingProgramsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update employee_training_program" do
-    patch employee_training_program_url(@employee_training_program), params: { employee_training_program: { employee_id: @employee_training_program.employee_id, program_id: @employee_training_program.program_id } }, as: :json
+    patch employee_training_program_url(@employee_training_program), params: { employee_training_program: { employee_id: @employee_training_program.employee_id, training_program_id: @employee_training_program.training_program_id } }, as: :json
     assert_response 200
   end
 

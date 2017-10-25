@@ -3,9 +3,9 @@
 one:
   product_title: MyText
   product_price: 1.5
-  Customer: one
+  customer: one
 
 two:
   product_title: MyText
   product_price: 1.5
-  Customer: two
+  customer: two

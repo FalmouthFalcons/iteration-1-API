@@ -2,8 +2,8 @@
 
 one:
   employee: one
-  program: one
+  training_program: one
 
 two:
   employee: two
-  program: two
+  training_program: two
