@@ -5,7 +5,7 @@ class CreateEmployees < ActiveRecord::Migration[5.1]
       t.text :name_first
       t.text :job_title
       t.date :employee_hire_date
-      t.references :Department, foreign_key: true
+      t.references :department, foreign_key: true
 
       t.timestamps
     end

@@ -1,6 +1,6 @@
 class TrainingProgram < ApplicationRecord
 
-    has_many :Employee_Training_Programs
-    has_many :Employees, through: :Employee_Training_Programs
+    has_many :employee_training_programs
+    has_many :employees, through: :employee_training_programs
 
 end

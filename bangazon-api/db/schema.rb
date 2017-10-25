@@ -64,10 +64,10 @@ ActiveRecord::Schema.define(version: 20171023205358) do
     t.text "name_first"
     t.text "job_title"
     t.date "employee_hire_date"
-    t.integer "Department_id"
+    t.integer "department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Department_id"], name: "index_employees_on_Department_id"
+    t.index ["department_id"], name: "index_employees_on_department_id"
   end
 
   create_table "order_products", force: :cascade do |t|
@@ -80,21 +80,21 @@ ActiveRecord::Schema.define(version: 20171023205358) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "Customer_id"
-    t.integer "Payment_Type_id"
+    t.integer "customer_id"
+    t.integer "payment_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Customer_id"], name: "index_orders_on_Customer_id"
-    t.index ["Payment_Type_id"], name: "index_orders_on_Payment_Type_id"
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
+    t.index ["payment_type_id"], name: "index_orders_on_payment_type_id"
   end
 
   create_table "payment_types", force: :cascade do |t|
     t.text "payment_type"
     t.integer "account_number"
-    t.integer "Customer_id"
+    t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Customer_id"], name: "index_payment_types_on_Customer_id"
+    t.index ["customer_id"], name: "index_payment_types_on_customer_id"
   end
 
   create_table "product_types", force: :cascade do |t|
@@ -106,10 +106,10 @@ ActiveRecord::Schema.define(version: 20171023205358) do
   create_table "products", force: :cascade do |t|
     t.text "product_title"
     t.float "product_price"
-    t.integer "Customer_id"
+    t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Customer_id"], name: "index_products_on_Customer_id"
+    t.index ["customer_id"], name: "index_products_on_customer_id"
   end
 
   create_table "training_programs", force: :cascade do |t|
