@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   def show
     # @order = Order.find(params[:id]).includes(:Product)
     # @order = Order.includes(:Products).find(params[:id])
-    render json: @order, :include => [:Products]
+    render json: @order, :include => [:products]
     
   end
 
