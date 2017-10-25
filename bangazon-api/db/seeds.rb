@@ -31,14 +31,14 @@ ProductType.create!([
 ])
 PaymentType.create!([
   {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1},
-  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1},
-  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1}
+  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 2},
+  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 3}
 ])
 
 Product.create!([
   {product_title: "t-shirt", product_price: 6.99, customer_id: 1},
-  {product_title: "t-shirt", product_price: 6.99, customer_id: 1},
-  {product_title: "t-shirt", product_price: 6.99, customer_id: 1}
+  {product_title: "t-shirt", product_price: 6.99, customer_id: 2},
+  {product_title: "t-shirt", product_price: 6.99, customer_id: 3}
 ])
 
 Department.create!([
@@ -48,30 +48,30 @@ Department.create!([
 ])
 Employee.create!([
   {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1},
-  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1},
-  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1}
+  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 2},
+  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 3}
 ])
 PaymentType.create!([
-  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1},
-  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1},
-  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1}
+  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 2},
+  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 2},
+  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 2}
 ])
 
 Product.create!([
   {product_title: "t-shirt", product_price: 6.99, customer_id: 1},
-  {product_title: "t-shirt", product_price: 6.99, customer_id: 1},
-  {product_title: "t-shirt", product_price: 6.99, customer_id: 1}
+  {product_title: "t-shirt", product_price: 6.99, customer_id: 2},
+  {product_title: "t-shirt", product_price: 6.99, customer_id: 3}
 ])
 
 Order.create!([
   {customer_id: 1, payment_type_id: 1},
-  {customer_id: 1, payment_type_id: 1},
-  {customer_id: 1, payment_type_id: 1}
+  {customer_id: 1, payment_type_id: 2},
+  {customer_id: 1, payment_type_id: 3}
 ])
 OrderProduct.create!([
   {product_id: 1, order_id: 1},
-  {product_id: 1, order_id: 1},
-  {product_id: 1, order_id: 1}
+  {product_id: 1, order_id: 2},
+  {product_id: 1, order_id: 3}
 ])
 
 Computer.create!([
@@ -87,16 +87,12 @@ Department.create!([
 ])
 Employee.create!([
   {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1},
-  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1},
-  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1}
+  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 2},
+  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 3}
 ])
 
 
-PaymentType.create!([
-  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1},
-  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1},
-  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1}
-])
+
 Department.create!([
   {department_name: "HR", expense_budget: 2000.0},
   {department_name: "HR", expense_budget: 2000.0},
@@ -104,8 +100,8 @@ Department.create!([
 ])
 Employee.create!([
   {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1},
-  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1},
-  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 1}
+  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 2},
+  {name_last: "Ford", name_first: "Malcolm", job_title: "Junior Dev", employee_hire_date: "2016-04-20", department_id: 3}
 ])
 
 TrainingProgram.create!([
@@ -114,14 +110,20 @@ TrainingProgram.create!([
   {start_date: "2017-12-25", end_date: "2018-01-29", subject: "customer service", max_occupancy: 28}
 ])
 
+
+PaymentType.create!([
+  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 1},
+  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 2},
+  {payment_type: "DebtCard3000", account_number: 123456789, customer_id: 3}
+])
 EmployeeTrainingProgram.create!([
-  {employee_id: 1, training_program_id: 3},
-  {employee_id: 1, training_program_id: 3},
-  {employee_id: 1, training_program_id: 3}
+  {employee_id: 1, training_program_id: 1},
+  {employee_id: 2, training_program_id: 2},
+  {employee_id: 3, training_program_id: 3}
 ])
 
 EmployeeComputer.create!([
   {employee_id: 1, computer_id: 1},
-  {employee_id: 1, computer_id: 1},
-  {employee_id: 1, computer_id: 1}
+  {employee_id: 2, computer_id: 1},
+  {employee_id: 3, computer_id: 1}
 ])
